@@ -1,5 +1,5 @@
 
-POST  https://uvqqwd5r1d.execute-api.us-east-1.amazonaws.com/dev/user/signup
+POST  http://localhost:5000/user/signup
 Content-Type: application/json
 
 {
