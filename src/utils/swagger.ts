@@ -24,14 +24,14 @@ const options: swaggerJsdoc.Options = {
       },
     ],
   },
-  apis: ["./src/routes.ts", "./src/schema/*.ts"],
+  apis: ["./src/routes.js", "./src/schema/*.js"],
 };
 
 const swaggerSpec = swaggerJsdoc(options);
 
 function swaggerDocs(app: Express, port: number) {
   // Swagger page
-  app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+  app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
   // Docs in JSON format
   app.get("/docs.json", (req: Request, res: Response) => {
@@ -40,7 +40,7 @@ function swaggerDocs(app: Express, port: number) {
   });
 
   console.log(
-    `Docs available at https://uvqqwd5r1d.execute-api.us-east-1.amazonaws.com/dev/api-docs/api-docs`
+    `Docs available at https://uvqqwd5r1d.execute-api.us-east-1.amazonaws.com/dev/docs`
   );
 }
 
