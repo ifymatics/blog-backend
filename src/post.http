@@ -1,0 +1,29 @@
+
+POST https://uvqqwd5r1d.execute-api.us-east-1.amazonaws.com/dev/blog_post
+Content-Type: application/json
+Authorization: BeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQxMTU5OTEsImV4cCI6MTY5NDEyNjc5MSwiYXVkIjoiMTAiLCJpc3MiOiJtZWRpY2FsZGVwYXJ0dXJlcyJ9.vo37IDPyIe-K_U-YGELihFD1TOUc0FUKoyWQfQG2o2w
+
+{
+    "title":"first post",
+    "content":"This is the first post",
+    "user_id":10
+}
+###
+GET https://uvqqwd5r1d.execute-api.us-east-1.amazonaws.com/dev/blog_post
+Content-Type: application/json
+Authorization: BeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQxMTU5OTEsImV4cCI6MTY5NDEyNjc5MSwiYXVkIjoiMTAiLCJpc3MiOiJtZWRpY2FsZGVwYXJ0dXJlcyJ9.vo37IDPyIe-K_U-YGELihFD1TOUc0FUKoyWQfQG2o2w
+
+###
+PATCH https://uvqqwd5r1d.execute-api.us-east-1.amazonaws.com/dev/blog_post/1
+Content-Type: application/json
+Authorization: BeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQxMTU5OTEsImV4cCI6MTY5NDEyNjc5MSwiYXVkIjoiMTAiLCJpc3MiOiJtZWRpY2FsZGVwYXJ0dXJlcyJ9.vo37IDPyIe-K_U-YGELihFD1TOUc0FUKoyWQfQG2o2w
+
+{
+    "title":"first post Updated",
+    "content":"This is the first post updatedS",
+    "user_id":10
+}
+###
+DELETE https://uvqqwd5r1d.execute-api.us-east-1.amazonaws.com/dev/blog_post/1
+Content-Type: application/json
+Authorization: BeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQxMTU5OTEsImV4cCI6MTY5NDEyNjc5MSwiYXVkIjoiMTAiLCJpc3MiOiJtZWRpY2FsZGVwYXJ0dXJlcyJ9.vo37IDPyIe-K_U-YGELihFD1TOUc0FUKoyWQfQG2o2w
