@@ -11,23 +11,23 @@ Content-Type: application/json
 }
 ###
 
-POST https://uvqqwd5r1d.execute-api.us-east-1.amazonaws.com/dev/user/signin
+POST http://localhost:5000/user/signin
 Content-Type: application/json
 
 {
-   "username":"ifymatis",
+   "username":"ifymatics",
     "password":"12345"
    
 }
 ###
-GET https://uvqqwd5r1d.execute-api.us-east-1.amazonaws.com/dev/user/profile
+GET http://localhost:5000/user/profile
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQxMTU5OTEsImV4cCI6MTY5NDEyNjc5MSwiYXVkIjoiMTAiLCJpc3MiOiJtZWRpY2FsZGVwYXJ0dXJlcyJ9.vo37IDPyIe-K_U-YGELihFD1TOUc0FUKoyWQfQG2o2w
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQxNzMyNzQsImV4cCI6MTY5NDE4NDA3NCwiYXVkIjoiMTEiLCJpc3MiOiJtZWRpY2FsZGVwYXJ0dXJlcyJ9.EuDp3eK65tPO1b_QiqAVnGdxGIGAzOA1-wquUMnmmlk
 
 ###
 PATCH https://uvqqwd5r1d.execute-api.us-east-1.amazonaws.com/dev/user/profile
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQxMTU5OTEsImV4cCI6MTY5NDEyNjc5MSwiYXVkIjoiMTAiLCJpc3MiOiJtZWRpY2FsZGVwYXJ0dXJlcyJ9.vo37IDPyIe-K_U-YGELihFD1TOUc0FUKoyWQfQG2o2w
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQxNzMyNzQsImV4cCI6MTY5NDE4NDA3NCwiYXVkIjoiMTEiLCJpc3MiOiJtZWRpY2FsZGVwYXJ0dXJlcyJ9.EuDp3eK65tPO1b_QiqAVnGdxGIGAzOA1-wquUMnmmlk
 
 {
     "firstname":"ifean",
@@ -37,6 +37,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQxMTU5O
 
 DELETE https://uvqqwd5r1d.execute-api.us-east-1.amazonaws.com/dev/user/profile
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQxMTU5OTEsImV4cCI6MTY5NDEyNjc5MSwiYXVkIjoiMTAiLCJpc3MiOiJtZWRpY2FsZGVwYXJ0dXJlcyJ9.vo37IDPyIe-K_U-YGELihFD1TOUc0FUKoyWQfQG2o2w
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQxNzMyNzQsImV4cCI6MTY5NDE4NDA3NCwiYXVkIjoiMTEiLCJpc3MiOiJtZWRpY2FsZGVwYXJ0dXJlcyJ9.EuDp3eK65tPO1b_QiqAVnGdxGIGAzOA1-wquUMnmmlk
 
 ###

@@ -1,29 +1,29 @@
 
-POST https://uvqqwd5r1d.execute-api.us-east-1.amazonaws.com/dev/blog_post
+POST http://localhost:5000/blog_post
 Content-Type: application/json
-Authorization: BeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQxMTU5OTEsImV4cCI6MTY5NDEyNjc5MSwiYXVkIjoiMTAiLCJpc3MiOiJtZWRpY2FsZGVwYXJ0dXJlcyJ9.vo37IDPyIe-K_U-YGELihFD1TOUc0FUKoyWQfQG2o2w
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQxNzMyNzQsImV4cCI6MTY5NDE4NDA3NCwiYXVkIjoiMTEiLCJpc3MiOiJtZWRpY2FsZGVwYXJ0dXJlcyJ9.EuDp3eK65tPO1b_QiqAVnGdxGIGAzOA1-wquUMnmmlk
 
 {
     "title":"first post",
     "content":"This is the first post",
-    "user_id":10
+    "user_id":11
 }
 ###
-GET https://uvqqwd5r1d.execute-api.us-east-1.amazonaws.com/dev/blog_post
+GET http://localhost:5000/blog_post
 Content-Type: application/json
-Authorization: BeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQxMTU5OTEsImV4cCI6MTY5NDEyNjc5MSwiYXVkIjoiMTAiLCJpc3MiOiJtZWRpY2FsZGVwYXJ0dXJlcyJ9.vo37IDPyIe-K_U-YGELihFD1TOUc0FUKoyWQfQG2o2w
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQxNzMyNzQsImV4cCI6MTY5NDE4NDA3NCwiYXVkIjoiMTEiLCJpc3MiOiJtZWRpY2FsZGVwYXJ0dXJlcyJ9.EuDp3eK65tPO1b_QiqAVnGdxGIGAzOA1-wquUMnmmlk
 
 ###
-PATCH https://uvqqwd5r1d.execute-api.us-east-1.amazonaws.com/dev/blog_post/1
+PATCH http://localhost:5000/blog_post/1
 Content-Type: application/json
-Authorization: BeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQxMTU5OTEsImV4cCI6MTY5NDEyNjc5MSwiYXVkIjoiMTAiLCJpc3MiOiJtZWRpY2FsZGVwYXJ0dXJlcyJ9.vo37IDPyIe-K_U-YGELihFD1TOUc0FUKoyWQfQG2o2w
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQxNzMyNzQsImV4cCI6MTY5NDE4NDA3NCwiYXVkIjoiMTEiLCJpc3MiOiJtZWRpY2FsZGVwYXJ0dXJlcyJ9.EuDp3eK65tPO1b_QiqAVnGdxGIGAzOA1-wquUMnmmlk
 
 {
     "title":"first post Updated",
-    "content":"This is the first post updatedS",
-    "user_id":10
+    "content":"This is the first post updatedS 2222222222222",
+    "user_id":11
 }
 ###
-DELETE https://uvqqwd5r1d.execute-api.us-east-1.amazonaws.com/dev/blog_post/1
+DELETE http://localhost:5000/blog_post/1
 Content-Type: application/json
-Authorization: BeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQxMTU5OTEsImV4cCI6MTY5NDEyNjc5MSwiYXVkIjoiMTAiLCJpc3MiOiJtZWRpY2FsZGVwYXJ0dXJlcyJ9.vo37IDPyIe-K_U-YGELihFD1TOUc0FUKoyWQfQG2o2w
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQxNzMyNzQsImV4cCI6MTY5NDE4NDA3NCwiYXVkIjoiMTEiLCJpc3MiOiJtZWRpY2FsZGVwYXJ0dXJlcyJ9.EuDp3eK65tPO1b_QiqAVnGdxGIGAzOA1-wquUMnmmlk

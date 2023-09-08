@@ -1,21 +1,11 @@
 import { Request, Response, NextFunction } from "express";
 import { db } from "./../database";
 
-export const createPost = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
+export const createPost = async (req: Request, res: Response) => {
   try {
     //create post
     const { title, content, user_id } = req.body;
 
-    const createPostQuery =
-      "INSERT INTO posts (title, content, user_id) VALUES (?, ?, ?)";
-
-    const values = [title, content, user_id];
-
-    const result = await db.query(createPostQuery, values);
     return res.status(201).json("post created successfully").send();
   } catch (error: any) {
     console.log(error.message);
@@ -23,12 +13,7 @@ export const createPost = async (
   }
 };
 
-export const getUserPost = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
-  const userId = req.params;
+export const getUserPost = async (req: Request, res: Response) => {
   const postQuery = `SELECT * FROM posts WHERE user_id = ?`;
   try {
     const result = await db.query(postQuery, [+req.currentUserId]);
@@ -38,21 +23,18 @@ export const getUserPost = async (
     return res.status(500).json("Something went wrong");
   }
 };
-export const updatePost = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
+export const updatePost = async (req: Request, res: Response) => {
   const { title, content } = req.body;
   const id = req.params.id;
   const updatePostQuery = `SELECT id FROM posts WHERE id = ? AND user_id = ?`;
 
   try {
     const result = await db.query(updatePostQuery, [+id, +req.currentUserId]);
-    if (!result[0]) return res.status(404).json("No post found");
-
+    if (Array.isArray(result[0]) && result[0].length === 0)
+      return res.status(404).json("No post found");
+    const [post] = result[0] as { id: number }[];
     const updateQuery = `UPDATE posts SET title = ?, content = ? WHERE id = ?`;
-    await db.query(updateQuery, [title, content, +id]);
+    await db.query(updateQuery, [title, content, post.id]);
 
     return res.status(200).json("updated successfully");
   } catch (error: any) {
@@ -60,11 +42,7 @@ export const updatePost = async (
     return res.status(500).json("Something went wrong");
   }
 };
-export const deletePost = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
+export const deletePost = async (req: Request, res: Response) => {
   const { currentUserId } = req;
   const postId = req.params.id;
   const selectPostQuery = `SELECT id FROM posts WHERE id = ? AND user_id = ?`;
